@@ -1,0 +1,42 @@
+<style>
+  body {
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: 12pt;
+  }
+  .big {
+    font-size: 16pt;
+  }
+</style>
+<p>
+  Please verify your humanity...
+</p>
+<p class="big">
+  Take the third word in this sentence and type it backwards.
+</p>
+<br>
+<br>
+<input id="in" type="text">
+<button onclick="verify()">Done</button>
+<br>
+<br>
+<div id="response">
+
+</div>
+
+
+<script>
+function verify() {
+  var response = document.getElementById("response");
+  if (document.getElementById("in").value === "driht") {
+    response.innerHTML =
+      "My email is in this format: <b>jane.doe@gmail.com</b>. Use my name obviously.";
+  } else {
+    response.innerHTML = "";
+    setTimeout(function() {
+      response.innerHTML = "Wrong, try again.";
+    }, 250);
+  }
+}
+</script>
